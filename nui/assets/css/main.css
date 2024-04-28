@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Montserrat-VariableFont_wght';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+body {
+    font-family: Montserrat-VariableFont_wght;
+    font-size: 16px;
+    color: white;
+}
+
+.waypoints-container {
+
+}
+
+.waypoint {
+    top: -1000;
+    left: 0;
+    position: absolute;
+    display: flex;
+    row-gap: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.waypoint > img {
+    width: 50px;
+}
