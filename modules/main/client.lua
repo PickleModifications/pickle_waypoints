@@ -105,11 +105,12 @@ function OpenAdminWaypointMenu()
     })
     if not input then return end
     local rgb = lib.math.torgba(input[6])
+    local alpha = GetAlphaFromString(input[6])
     if input[5] == "default" then input[5] = nil end
     SetWaypointOff()
     TriggerServerEvent("pickle_waypoints:sendAdminWaypoint", 
         coords, 
-        input[1], input[2], input[3], input[4], input[5], {math.ceil(rgb.x), math.ceil(rgb.y), math.ceil(rgb.z), math.ceil(rgb.w * 255)}, input[7]
+        input[1], input[2], input[3], input[4], input[5], {math.ceil(rgb.x), math.ceil(rgb.y), math.ceil(rgb.z), alpha * 255}, input[7]
     )
 end
 
